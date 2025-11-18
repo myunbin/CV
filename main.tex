@@ -1,0 +1,390 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+
+\usepackage[T1]{fontenc}
+% \usepackage{tgbonum}
+
+\setlength{\footskip}{4.08003pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+ % \renewcommand{\familydefault}{\sfdefault}
+
+\geometry{left=1.4cm, top=1cm, right=1.4cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\footskip}{4.08003pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Hyunbin Kim} % Your Name
+\newcommand{\course}{ } % Your Program
+% \newcommand{\roll}{xxxxxxx} % Your Roll No.
+\newcommand{\phone}{10-9962-0019} % Your Phone Number
+% \newcommand{\emaila}{akim9905@gmail.com} %Email 1
+\newcommand{\emailb}{akim9905@ajou.ac.kr} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+% \parbox{2.6cm}{%
+% \includegraphics[width=2.35cm,clip]{ajou.png}
+% }
+\parbox{\dimexpr\linewidth\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\huge \name} & {\raisebox{0.0\height}{\footnotesize}\ }\\
+  % {Roll No.: \roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}} \\
+  % {Your Course} &  \href{https://yourGithubProfile.com/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  % {SLIET, Punjab} & \href{https://www.yourLinkedinProfile.com/in/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Ajou University}{GPA : 4.36/4.5}
+      {Department of Computer Engineering}{Mar '19 - Current}
+  \resumeSubHeadingListEnd
+% \vspace{-5.5mm}
+%
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {NetSys Lab. (Prof. Younghoon Kim)}{Suwon, Korea}
+      {Undergraduate Internship}{Mar '25 - Current}
+      \resumeItemListStart
+      \item Researching Linux networking subsystem and extended BPF (eBPF) for system-level performance and programmability
+      \resumeItemListEnd
+    \resumeSubheading
+      {Theory of Natural Computation Lab. (Prof. Dajung Cho)}{Suwon, Korea}
+      {Undergraduate Internship}{Dec '23 - Dec '24}
+      \resumeItemListStart
+    \item {Researched a string operation called \textit{Abelian duplication} from a formal language theory perspective, focusing on decision problems and closure properties}
+    \resumeItemListEnd    
+
+    
+  \resumeSubHeadingListEnd
+% \vspace{-8.5mm}
+
+%----------Publications-----------------
+\section{\textbf{Publication}}
+\resumeSubHeadingListStart
+\resumePOR{Abelian duplications on strings and string searching algorithms}{\\ \footnotesize{\underline{Hyunbin Kim}, Chiwook Ahn, Dajung Cho} \\ \footnotesize{Korea Computer Congress 2024 (KCC '24)}, Jeju, South Korea, June 26-28, 2024 \textbf{(Excellent Paper Award)}}{}
+
+\resumePOR{Algorithms for Searching Maximum-Length Abelian Duplications in Strings}{\\ \footnotesize{\underline{Hyunbin Kim}, Dajung Cho} \\ \footnotesize{KIISE Transactions on Computing Practices (KTCP '25)}}{}
+
+\resumePOR{Online Approaches for Abelian Duplication in Strings : Design and Applications}{\\ \footnotesize{\underline{Hyunbin Kim}, Dajung Cho} \\ \footnotesize{Korea Conference on Software Engineering 2025 (KCSE '25)}, Pyeongchang, South Korea, Jan 20-22, 2025}{}
+
+\resumeSubHeadingListEnd
+
+%-----------Research Interests-----------------
+\section{\textbf{Research Interests}}
+\vspace{-0.4mm}
+
+\resumeSubHeadingListStart
+
+\resumePOR{Computer Architecture and Systems, Compiler} % Position
+    {} %Club,Event
+    {} %Tenure Period
+
+\resumePOR{Algorithm - } % Position
+    {graph theory, geometry, string algorithm} %Club,Event
+    {} %Tenure Period
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{\textbf{Activities and Projects}}
+\resumeSubHeadingListStart
+    \resumeProject
+          {\href{https://ucpc.me/}{Union of Clubs for Programming Contest (UCPC)}}%Project Name
+          {Vice president} %Project Name, Location Name
+          {Jan '25 - Sep '25} %Event Dates
+    
+        \resumeItemListStart
+            \item {Largest algorithmic problem solving club union(30+ Universities) in Korea}
+            \item Designed set of problems(submitted 1 problem), sponsor communication, organizing seminar
+        \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {shake! - 
+      \href{https://www.acmicpc.net/category/detail/3557}{2022}, 
+      \href{https://www.acmicpc.net/category/detail/4121}{2023}, 
+      \href{https://www.acmicpc.net/category/1078}{2024} } %Project Name
+      {Director, Problem setter} %Project Name, Location Name
+      {Sep-Jan \{'22, '23, '24\}}
+
+    \resumeItemListStart
+        % \item {Tools \& technologies used: xxx,xxx}
+        \item {Annual ICPC-style college union programming contest for 6 universities in Kyongin Region}
+        \begin{itemize}
+            \item Participants : \{Ajou, Hanyang-ERICA, Inha, Korea Aerospace, Kyunghee, Sungkyunkwan, Dankook\} Univ.
+        \end{itemize}
+        \item {Designed set of problems}
+        \begin{itemize}
+            \item {2022 : Submitted 2 problems (Problem B, C)}
+            \item {2023 : Submitted 2 problems (Problem A, C)}
+            \item {2024 : Submitted 3 problems (Problem B, F, J)}
+        \end{itemize}
+    \resumeItemListEnd
+    \vspace{-2mm}
+\newpage
+
+    \resumeProject
+      {Ajou Programming Contest (APC) - \href{https://www.acmicpc.net/category/detail/3219}{2022}, \href{https://www.acmicpc.net/category/848}{2023} ,\href{https://www.acmicpc.net/category/1037}{2024}
+      ,\href{https://www.acmicpc.net/category/1112}{2025}}
+      %Project Name
+      {Director, Problem setter} %Project Name, Location Name
+      {Mar - May \{'22,'23,'24, '25\}}
+
+    \resumeItemListStart
+        \item {Annual ICPC-style programming contest held in Ajou Univ.}
+        \item {Designed set of problems}
+        \begin{itemize}
+            \item {2022 : Submitted 3 problems} / {2023 : Submitted 7 problems} / {2024 : Submitted 4 problems} / {2025 : Submitted 2 problems}
+        \end{itemize}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+    \resumeProject
+      {Analyze 'N Solve It (ANSI)} %Project Name
+      {Member, Vice president} %Project Name, Location Name
+      {Jan '23 - Current} %Event Dates
+
+    \resumeItemListStart
+        \item {Algorithmic problem solving club in Ajou University}
+        \item {Ran algorithmic problem solving study group -- \{Intermediate, Advanced\} Algorithm study group}
+        \item {Directed several programming contests}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+  \resumeSubHeadingListEnd
+% \vspace{-5.5mm}
+
+
+%-----------Futher Skills and Qualifications-----------------
+\section{\textbf{Further Skills and Qualifications}}
+\vspace{-0.4mm}
+
+\resumeSubHeadingListStart
+\resumePOR{Software Skills : } % Position
+    {C/C++, \LaTeX} %Club,Event
+    {} %Tenure Period
+
+\resumePOR{Language : } % Position
+    {Korean(Native), English(Upper intermediate)} %Club,Event
+    {} %Tenure Period
+
+\resumeSubHeadingListEnd
+
+
+%-----------Achievements-----------------
+\section{\textbf{Achievements and Honors}}
+
+\vspace{1mm}
+* \href{https://icpc.global/}{ICPC} : International Collegiate Programming Contest
+\vspace{-0.4mm}
+
+\resumeSubHeadingListStart
+
+% \resumePOR{40th place, } % Award
+%     {2024 ICPC Asia Pacific Championship} % Event
+%     {Nov '24} %Event Year
+    
+% \resumePOR{12th place, } % Award
+%     {2024 ICPC Jakarta Regional} % Event
+%     {Dec '24} %Event Year
+    
+% \resumePOR{36th place, } % Award
+%     {2024 ICPC Seoul Regional -- Preliminary contest} % Event
+%     {Nov '24} %Event Year
+
+\resumePOR{Excellence Award, } % Award
+    {'24 Fall, Ajou Softcon -- Research section} % Event
+    {Dec '24} %Event Year
+
+\resumePOR{Honor, } % Award
+    {2024 ICPC Jakarta Regional} % Event
+    {Dec '24} %Event Year
+    
+\resumePOR{Honor, } % Award
+    {2024 ICPC Seoul Regional} % Event
+    {Nov '24} %Event Year
+
+\resumePOR{Excellent Paper Award, } % Award
+{Korea Computer Congress 2024 (KCC '24)} % Event
+{Jul '24} %Event Year
+
+\resumePOR{34th place, } % Award
+    {2023 ICPC Seoul Regional} % Event
+    {Nov '23} %Event Year
+
+\resumePOR{59th place, } % Award
+    {2022 ICPC Seoul Regional} % Event
+    {Nov '22} %Event Year
+    
+\resumePOR{Finalist, } % Award
+    {2023 Samsung Collegiate Programming Cup ('23 SCPC)} % Event
+    {Aug '23} %Event Year
+
+        \resumePOR{Academic Scholarship (Daewoo Scholarship -- College Top Rank)} % Award
+    {, Ajou University} % Event
+    {Jul '25} %Event Year
+
+\resumePOR{Academic Scholarship (Yulgok Scholarship)} % Award
+    {, Ajou University} % Event
+    {Dec '24} %Event Year
+    
+\resumePOR{Academic Scholarship (Yulgok Scholarship)} % Award
+    {, Ajou University} % Event
+    {Dec '23} %Event Year
+    
+\resumePOR{Academic Scholarship (Yulgok Scholarship)} % Award
+    {, Ajou University} % Event
+    {Dec '22} %Event Year
+    
+\resumePOR{Academic Scholarship (Yulgok Scholarship)} % Award
+    {, Ajou University} % Event
+    {Jul '20} %Event Year
+
+
+    
+
+
+\resumeSubHeadingListEnd
+% \vspace{-5mm}
+
+
+
+%-------------------------------------------
+\end{document}
